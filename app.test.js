@@ -9,3 +9,11 @@ describe("GET /", () => {
     expect(response.text).toBe("Welcome to Git in Sync!");
   });
 });
+
+describe("GET /ror", () => {
+  it("responds dino text", async () => {
+    const response = await request(app).get("/");
+    expect(response.status).toBe(200);
+    expect(response.text).toBe("dino");
+  });
+});
